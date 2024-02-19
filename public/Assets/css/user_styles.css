@@ -1,0 +1,579 @@
+body{
+    font-family: sans-serif;
+}
+
+/* navbar */
+#navbar{
+    margin-bottom: 100px;
+}
+.navbar{
+    padding: 0% 10% 0% 10%;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.navbar-brand{
+    width: auto;
+    /* margin: 0% 2% 0% 0%; */
+    padding-bottom: 10px;
+}
+.navbar-nav{
+    margin: auto;
+}
+
+.nav-item a {
+    color:#077739 !important;
+}
+.navbar-brand h6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* end of navbar */
+
+
+
+
+
+/* carousel */
+
+#heroCarousel{
+    /* padding-top: 100px; */
+    
+}
+#carouselExampleCaptions {
+    max-width: 80%; /* Set your desired maximum width */
+    margin: auto; /* Center the carousel on the page */
+}
+.carousel{
+    border-radius: 20px;
+}
+.carousel-inner{
+    border-radius: 20px;
+}
+.c-item{
+    max-height: 600px;
+}
+
+.c-img{
+    height: 100%;
+    max-height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+/* end of carousel */
+
+
+
+
+
+/* section e-goverment */
+#egoverment{
+    margin-top: 40px;
+    height: 800px;
+    background-color: #077739;
+    border-radius: 80px 80px 0px 0px;
+}
+.head-egov{
+    padding-top: 20px;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    max-width: 70%;
+    background-color: #077739;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    margin: auto;
+}
+.container-egov{
+    padding: 10px 50px 10px 50px;
+    color: white;
+    max-width: 80%;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #077739;
+    font-style: normal;
+    margin: auto;
+}
+
+/* end of section e-goverment */
+
+
+
+
+
+/* section card  */
+.cd-img{
+    height: 100%;
+    object-fit: cover;
+}
+.card-egov{
+    background-color: #01A149;
+    color: white;
+    margin: 0.1rem;
+    font-family: sans-serif;
+    max-width: 400px;
+    height: 200px;
+}
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+/* end of section card  */
+
+
+
+
+
+/* section informasi */
+
+#informasi{
+    max-width: 80%; 
+    margin: auto; 
+    display: flex;
+    background-color: white;
+    margin-top: -300px !important;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.container-info{
+    margin: auto; 
+    display: flex;
+}
+
+
+
+.head-berita h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.container-berita{
+    margin: 20px 10px 0px 10px; 
+}
+.berita{
+    padding-top: 20px;
+}
+.berita-card-container{
+    border-radius: 20px;
+    max-height: 750px; 
+    padding-top: 20px;
+}
+.berita-img{
+    max-height: 200px !important;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.head-galeri h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.galeri{
+    padding-top: 20px;
+}
+.container-galeri{
+    margin: 20px 10px 0px 10px; 
+}
+.galeri-card-container{
+    border-radius: 20px;
+    max-height: 750px; 
+    padding-top: 20px;
+    
+}
+
+.card{
+    background-color:#01A149;
+}
+
+.card-galeri{
+    height: 240px;
+}
+
+
+.text-link a{
+    color: white;
+    text-decoration: none;
+}
+
+/* .galer-test{
+    height: 500px;
+   margin-bottom: 100px !important;
+} */
+
+.glr-img{
+    max-height: 200px !important;
+    object-fit: cover;
+}
+
+/* end of section informasi */
+
+
+
+
+
+/* section informasi-2 */
+#informasi-2{
+    margin-top: 40px !important;
+    max-width: 80%; 
+    margin: auto; 
+    display: flex;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-informasi-2{
+    margin: auto; 
+    display: flex;
+}
+.head-pengumuman h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.pengumuman{
+    padding-top: 20px;
+}
+.container-pengumuman{
+    border-radius: 20px;
+    margin: 20px 10px 0px 10px; 
+}
+.pengumuman-card-container{
+    border-radius: 20px;
+    height: 100%; 
+    padding-top: 20px;
+}
+.link-pengumuman a{
+    font-family: sans-serif;
+    font-weight: bold; 
+    font-size: 14px;
+}
+.link-pengumuman a:link{
+    text-decoration:none;
+}
+.link-pengumuman a:hover{
+    color: yellow !important;
+}
+.link-pengumuman a:visited{
+    color: green !important;
+}
+.pengumuman-img{
+    max-height: 200px !important;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.head-artikel h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.container-artikel{
+    border-radius: 20px;
+    margin: 20px 10px 0px 10px; 
+}
+.artikel{
+    padding-top: 20px;
+}
+.artikel-card-container{
+    border-radius: 20px;
+    height: 100%; 
+    padding-top: 20px;
+}
+.link-artikel a{
+    font-family: sans-serif;
+    font-weight: bold; 
+    font-size: 14px;
+}
+
+.link-artikel a:link{
+    text-decoration:none;
+}
+.link-artikel a:hover{
+    color: yellow !important;
+}
+.link-artikel a:visited{
+    color: green !important;
+}
+.artikel-img{
+    max-height: 200px !important;
+    object-fit: cover;
+}
+/* end section informasi-2 */
+
+
+/* section informasi-3 */
+#informasi-3{
+    margin-top: 40px !important;
+    max-width: 80%; 
+    margin: auto; 
+    display: flex;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-informasi-3{
+    margin: auto; 
+    display: flex;
+}
+.head-agenda h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.agenda{
+    padding-top: 20px;
+}
+.container-agenda{
+    border-radius: 20px;
+    margin: 20px 10px 0px 10px; 
+}
+.agenda-card-container{
+    border-radius: 20px;
+    height: 100%; 
+    padding-top: 20px;
+}
+.link-agenda a{
+    font-family: sans-serif;
+    font-weight: bold; 
+    font-size: 14px;
+}
+.link-agenda a:link{
+    text-decoration:none;
+}
+.link-agenda a:hover{
+    color: yellow !important;
+}
+.link-agenda a:visited{
+    color: green !important;
+}
+
+
+
+
+
+.head-jadwal h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.container-jadwal{
+    border-radius: 20px;
+    margin: 20px 10px 0px 10px; 
+}
+.jadwal{
+    padding-top: 20px;
+}
+.jadwal-card-container{
+    border-radius: 20px;
+    height: 100%; 
+    padding-top: 20px;
+}
+.link-jadwal a{
+    font-family: sans-serif;
+    font-weight: bold; 
+    font-size: 14px;
+}
+.link-jadwal a:link{
+    text-decoration:none;
+}
+.link-jadwal a:hover{
+    color: yellow !important;
+}
+.link-jadwal a:visited{
+    color: green !important;
+}
+
+/* end section informasi-3 */
+
+
+
+
+
+
+
+/* section informasi-4 */
+#informasi-4{
+    margin-top: 40px !important;
+    max-width: 80%; 
+    margin: auto; 
+    display: flex;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-informasi-4{
+    margin: auto; 
+    display: flex;
+}
+.head-map h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.map{
+    padding: 20px 20px 0px 20px;
+}
+.container-map{
+    margin:auto;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    padding-bottom: 20px;
+}
+iframe{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.head-statistik h2{
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px 0px 8px 0px;
+    background-color: #077739;
+    margin:auto;
+    font-family: sans-serif;
+    font-weight: bold; 
+    color: white;
+    font-size: 24px;
+}
+.container-statistik{
+    margin-top: auto;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 290px;
+    max-height: 500px;
+    padding-bottom: 20px;
+    
+}
+.statistik{
+    padding: 20px 20px 0px 20px;
+}
+/* end section informasi-4 */
+
+
+
+
+#footer{
+    margin-top: 50px;
+    display: flex;
+    height: 100%;
+    background-color: #077739;
+    border-radius: 80px 80px 0px 0px;
+}
+.footer-container{
+    margin: 50px 0px 20px 0px;
+    height: 100%;
+    margin-top: 100px;
+}
+.kontak{
+    height: 100%;
+}
+.sosmed-container{
+    margin: auto;
+    height: 100%;
+}
+
+.footer-content{
+    color: white;
+    background-color: #077739;
+}
+
+td a:link{
+    color: white;
+}
+td a:hover{
+    color: yellow;
+}
+td a:visited{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
