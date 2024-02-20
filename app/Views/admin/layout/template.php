@@ -74,12 +74,12 @@
                             </nav>
                         </div>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                        <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Pages
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        </a> -->
+                        <!-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                     Authentication
@@ -104,8 +104,8 @@
                                     </nav>
                                 </div>
                             </nav>
-                        </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        </div> -->
+                        <!-- <div class="sb-sidenav-menu-heading">Addons</div>
                         <a class="nav-link" href="charts.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Charts
@@ -113,12 +113,12 @@
                         <a class="nav-link" href="tables.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    Dummy Admin
                 </div>
             </nav>
         </div>
@@ -131,7 +131,7 @@
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                    <div class="text-muted">Copyright &copy; BKPPD Pemkab Magelang 2024</div>
                     <div>
                         <a href="#">Privacy Policy</a>
                         &middot;
@@ -149,6 +149,78 @@
     <script src="<?= base_url('Assets'); ?>/admin/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="<?= base_url('Assets'); ?>/admin/js/datatables-simple-demo.js"></script>
+
+    <script>
+        Highcharts.setOptions({
+            colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
+                '#FF9655', '#FFF263', '#6AF9C4'
+            ],
+        });
+        Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Survei Kepuasan'
+            },
+            exporting: {
+                enabled: false
+            },
+            xAxis: {
+                categories: ['Survei'],
+                labels: {
+                    enabled: false
+                },
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Jumlah (Survei)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' Orang'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'bottom',
+                x: 0,
+                y: -38,
+                floating: true,
+                borderWidth: 0,
+                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                "name": "Sangat Puas",
+                "data": [2]
+            }, {
+                "name": "Puas",
+                "data": [2]
+            }, {
+                "name": "Kurang Puas",
+                "data": [1]
+            }, {
+                "name": "Tidak Puas",
+                "data": [1]
+            }]
+        });
+    </script>
 </body>
 
 </html>

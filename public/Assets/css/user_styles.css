@@ -115,7 +115,6 @@ body{
     margin: 0.1rem;
     font-family: sans-serif;
     max-width: 400px;
-    height: 200px;
 }
 .card-text {
     overflow: hidden;

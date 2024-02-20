@@ -49,7 +49,7 @@ class AgendaController extends BaseController
     }
 
     // UPDATE Method
-    public function updatAagenda($id_agenda)
+    public function updateAgenda($id_agenda)
     {
         $validation = \Config\Services::validation();
 

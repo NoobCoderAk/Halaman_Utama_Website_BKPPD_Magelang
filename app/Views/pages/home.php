@@ -1,4 +1,5 @@
 <div class="col" style="min-height: 100vh;">
+    <div class="w-100" style="height: 60px;"></div>
     <!-- Carousel -->
     <section id="heroCarousel" style="padding-left: 15%; padding-right: 15%; ">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -35,20 +36,19 @@
             <p>E-Goverment</p>
         </div>
         <div class="row justify-content-center container-egov">
-            <div class="row overflow-auto justify-content-center row-cols-1 row-cols-md-3 g-2" style="height: 300px;">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 overflow-auto" style="max-height: 300px;">
                 <?php foreach ($daftar_egov as $egov) : ?>
-                    <div class="col">
-                        <div class="card card-egov shadow mb-3" style="max-width: 540px;">
-                            <div class="row g-0" style="height: 100%;">
+                    <div class="col mb-3">
+                        <div class="card card-egov h-100">
+                            <div class="row g-0 h-100">
                                 <div class="col-md-4">
                                     <img src="<?= base_url('/Assets/Images/' . $egov->gambar_egov); ?>" class="img-fluid rounded-start cd-img" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title fw-bold"><?= $egov->judul_egov; ?></h5>
+                                        <h5 class="card-title"><?= $egov->judul_egov; ?></h5>
                                         <p class="card-text"><?= $egov->deskripsi_egov; ?></p>
-                                        <a class="btn btn-light shadow text-success fw-bold" href="<?= $egov->link_egov; ?>" role="button">Lihat
-                                            Aplikasi</a>
+                                        <a href="<?= $egov->link_egov; ?>" class="btn btn-sm btn-light"><small class="text-body-secondary">Lihat Aplikasi</small></a>
                                     </div>
                                 </div>
                             </div>
@@ -57,6 +57,7 @@
                 <?php endforeach; ?>
             </div>
         </div>
+
     </section>
     <!-- End of E-Goverment -->
 
