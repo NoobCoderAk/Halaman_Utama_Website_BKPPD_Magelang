@@ -4,12 +4,12 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KategoriModel extends Model
+class MapsModel extends Model
 {
-    protected $table            = 'kategori_konten';
-    protected $primaryKey       = 'id_kategori';
+    protected $table            = 'maps';
+    protected $primaryKey       = 'id_maps';
     protected $returnType       = 'object';
-    protected $allowedFields    = ['nama_kategori', 'slug_kategori'];
+    protected $allowedFields    = ['slug_maps', 'nama_maps', 'link_maps'];
 
     // Dates
     protected $useTimestamps = true;

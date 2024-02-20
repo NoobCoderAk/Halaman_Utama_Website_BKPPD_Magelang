@@ -11,13 +11,14 @@ use Psr\Log\LoggerInterface;
 
 
 // used Models
-use App\Models\KategoriModel;
 use App\Models\CarouselModel;
 use App\Models\EgovModel;
-
 use App\Models\GaleriModel;
 use App\Models\PengumumanModel;
 use App\Models\ArtikelModel;
+use App\Models\AgendaModel;
+use App\Models\JadwalModel;
+use App\Models\MapsModel;
 
 /**
  * Class BaseController
@@ -65,12 +66,13 @@ abstract class BaseController extends Controller
 
 
         // $this->session = \Config\Services::session();
-        $this->KategoriModel = new KategoriModel();
         $this->CarouselModel = new CarouselModel();
         $this->EgovModel = new EgovModel();
-
         $this->GaleriModel = new GaleriModel();
         $this->PengumumanModel = new PengumumanModel();
         $this->ArtikelModel = new ArtikelModel();
+        $this->AgendaModel = new AgendaModel();
+        $this->JadwalModel = new JadwalModel();
+        $this->MapsModel = new MapsModel();
     }
 }

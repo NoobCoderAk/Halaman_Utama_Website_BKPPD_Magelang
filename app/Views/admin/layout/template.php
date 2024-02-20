@@ -62,16 +62,14 @@
 
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?= base_url('kategori'); ?>">Kategori</a>
                                 <a class="nav-link" href="<?= base_url('carousel'); ?>">Carousel</a>
                                 <a class="nav-link" href="<?= base_url('egov'); ?>">E-Goverment</a>
-                                <a class="nav-link" href="<?= base_url('berita-utama'); ?>">Berita Utama</a>
                                 <a class="nav-link" href="<?= base_url('galeri'); ?>">Galeri</a>
                                 <a class="nav-link" href="<?= base_url('pengumuman'); ?>">Pengumuman</a>
                                 <a class="nav-link" href="<?= base_url('artikel'); ?>">Artikel</a>
                                 <a class="nav-link" href="<?= base_url('agenda'); ?>">Agenda</a>
                                 <a class="nav-link" href="<?= base_url('jadwal'); ?>">Jadwal</a>
-                                <a class="nav-link" href="<?= base_url('map'); ?>">Maps</a>
+                                <a class="nav-link" href="<?= base_url('maps'); ?>">Maps</a>
                                 <a class="nav-link" href="<?= base_url('survei-kepuasan'); ?>">Survei Kepuasan</a>
                             </nav>
                         </div>

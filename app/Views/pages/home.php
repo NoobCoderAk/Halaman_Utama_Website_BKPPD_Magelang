@@ -73,42 +73,39 @@
                 </div>
                 <div class="row container-berita justify-content-center">
                     <div class="row berita-card-container overflow-auto shadow row-cols-md-2">
-                        <div class="col-md-6">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top berita-img img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-link"><a href="">Card title</a></h5>
-                                    <p class="card-text text-link"><a href="">Card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores adipisci maiores iusto ducimus ipsum dolorum facere illum doloribus soluta ut qui quia totam fuga neque minus assumenda, aspernatur, perferendis voluptates.</a></p>
+                        <?php foreach (array_slice($daftar_galeri, -4) as $galeri) : ?>
+                            <div class="col-md-6">
+                                <div class="card shadow mb-3">
+                                    <img src="<?= base_url('/Assets/Images/' . $galeri->gambar_galeri); ?>" class="card-img-top glr-img img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-link"><a href="<?= $galeri->link_galeri; ?>"><?= $galeri->judul_galeri; ?></a></h5>
+                                        <p class=" small card-text text-link"><a href="<?= $galeri->link_galeri; ?>"><?= $galeri->deskripsi_galeri; ?></a></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top berita-img img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-link"><a href="">Card title</a></h5>
-                                    <p class="card-text text-link"><a href="">Card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores adipisci maiores iusto ducimus ipsum dolorum facere illum doloribus soluta ut qui quia totam fuga neque minus assumenda, aspernatur, perferendis voluptates.</a></p>
+                        <?php endforeach; ?>
+                        <?php foreach (array_slice($daftar_pengumuman, -4) as $pengumuman) : ?>
+                            <div class="col-md-6">
+                                <div class="card shadow mb-3">
+                                    <img src="<?= base_url('/Assets/Images/' . $pengumuman->gambar_pengumuman); ?>" class="card-img-top glr-img img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-link"><a href="<?= $pengumuman->link_pengumuman; ?>"><?= $pengumuman->judul_pengumuman; ?></a></h5>
+                                        <p class=" small card-text text-link"><a href="<?= $pengumuman->link_pengumuman; ?>"><?= $pengumuman->deskripsi_pengumuman; ?></a></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top berita-img img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-link"><a href="">Card title</a></h5>
-                                    <p class="card-text text-link"><a href="">Card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores adipisci maiores iusto ducimus ipsum dolorum facere illum doloribus soluta ut qui quia totam fuga neque minus assumenda, aspernatur, perferendis voluptates.</a></p>
+                        <?php endforeach; ?>
+                        <?php foreach (array_slice($daftar_artikel, -4) as $artikel) : ?>
+                            <div class="col-md-6">
+                                <div class="card shadow mb-3">
+                                    <img src="<?= base_url('/Assets/Images/' . $artikel->gambar_artikel); ?>" class="card-img-top glr-img img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-link"><a href="<?= $artikel->link_artikel; ?>"><?= $artikel->judul_artikel; ?></a></h5>
+                                        <p class=" small card-text text-link"><a href="<?= $artikel->link_artikel; ?>"><?= $artikel->deskripsi_artikel; ?></a></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top berita-img img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-link"><a href="">Card title</a></h5>
-                                    <p class="card-text text-link"><a href="">Card Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores adipisci maiores iusto ducimus ipsum dolorum facere illum doloribus soluta ut qui quia totam fuga neque minus assumenda, aspernatur, perferendis voluptates.</a></p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -193,79 +190,82 @@
     <!-- End of Informasi-2 -->
 
 
-
-
     <!-- Informasi-3 -->
     <section id="informasi-3" class="shadow">
-        <div class=" row container-informasi-3 ">
+        <div class=" row container-informasi-2 ">
             <div class="col-md-6 agenda">
-                <div class="row head-agenda justify-content-center text-center ">
+                <div class="row head-agenda text-center">
                     <h2>Agenda</h2>
                 </div>
                 <div class="row container-agenda shadow justify-content-center">
                     <div class="row agenda-card-container overflow-auto row-cols-md-2">
-                        <div class="col">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional
-                                        content. This content is a little bit longer.</p>
-                                </div>
+                        <?php foreach (array_slice($daftar_agenda, -2) as $agenda) : ?>
+                            <div class="col-md-6 content-fluid">
+                                <table class="table table-striped-rows table-bordered text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-light" style="background-color: #01A149;"><?= $agenda->nama_agenda ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?= $agenda->hari_agenda ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $agenda->tanggal_agenda ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $agenda->jam_agenda ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $agenda->tempat_agenda ?></td>
+                                        </tr>
+                                    </tbody style="border-radius: 20%;">
+                                </table>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional
-                                        content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="row link-agenda text-center"><a href="https://bkppd.magelangkab.go.id/home/category/292" style="color: green;">Lihat Selengkapnya..</a></div>
+                    <div class="row link-agenda text-center"><a href="https://bkppd.magelangkab.go.id/home/agenda" style="color: green;">Lihat Selengkapnya..</a></div>
                 </div>
             </div>
             <div class="col-md-6 jadwal">
                 <div class="row head-jadwal text-center">
-                    <h2>Jadwal</h2>
+                    <h2>jadwal</h2>
                 </div>
                 <div class="row container-jadwal shadow justify-content-center">
                     <div class="row jadwal-card-container overflow-auto row-cols-md-2">
-                        <div class="col">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional
-                                        content. This content is a little bit longer.</p>
-                                </div>
+                        <?php foreach (array_slice($daftar_jadwal, -2) as $jadwal) : ?>
+                            <div class="col-md-6 content-fluid">
+                                <table class="table table-striped-rows table-bordered text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-light" style="background-color: #01A149;"><?= $jadwal->nama_jadwal ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?= $jadwal->hari_jadwal ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $jadwal->tanggal_jadwal ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $jadwal->jam_jadwal ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?= $jadwal->tempat_jadwal ?></td>
+                                        </tr>
+                                    </tbody style="border-radius: 20%;">
+                                </table>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow mb-3">
-                                <img src="/Assets/Images/contoh-crsl.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional
-                                        content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="row link-jadwal text-center"><a href="https://bkppd.magelangkab.go.id/home/category/291" style="color: green;">Lihat Selengkapnya..</a></div>
+                    <div class="row link-jadwal text-center"><a href="https://bkppd.magelangkab.go.id/home/agenda" style="color: green;">Lihat Selengkapnya..</a></div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End of Informasi-3 -->
-
 
 
 
@@ -279,9 +279,11 @@
                 </div>
                 <div style="height: 20px;"></div>
                 <div class="row container-map shadow justify-content-center">
-                    <div id="map-container-google-1" class="z-depth-1-half container-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3954.8394183110845!2d110.2177259!3d-7.5924503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8db9f5a200c9%3A0x441ca33ac68ce4e0!2sKantor%20Bupati%20Kabupaten%20Magelang!5e0!3m2!1sen!2sid!4v1706493590217!5m2!1sen!2sid" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
+                    <?php foreach ($daftar_maps as $maps) : ?>
+                        <div id="map-container-google-1" class="z-depth-1-half container-map">
+                            <iframe src="<?= $maps->link_maps; ?>" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-md-6 statistik">

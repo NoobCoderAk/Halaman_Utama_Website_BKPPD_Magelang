@@ -4,25 +4,29 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class KetegoriKontenController extends Migration
+class MapsTabel extends Migration
 {
     public function up()
     {
-        // Membuat kolom/field untuk tabel carousel_hero
+        // Membuat kolom/field untuk tabel maps
         $this->forge->addField([
-            'id_kategori'          => [
+            'id_maps'            => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
-            'nama_kategori'       => [
+            'slug_maps' => [ //untuk menandai kategori konten apa cth: kategori maps ->> kategori-maps
                 'type'           => 'VARCHAR',
                 'constraint'     => '100'
             ],
-            'slug_kategori' => [ //untuk menandai kategori konten apa cth: kategori artikel ->> kategori-artikel
+            'nama_maps'         => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '100'
+            ],
+            'link_maps'     => [
+                'type'           => 'VARCHAR',
+                'constraint'    => '10'
             ],
             'tanggal_input'      => [
                 'type'           => 'DATETIME',
@@ -35,15 +39,15 @@ class KetegoriKontenController extends Migration
         ]);
 
         // Membuat primary key
-        $this->forge->addKey('id_kategori', TRUE);
+        $this->forge->addKey('id_maps', TRUE);
 
         // Membuat tabel carousel_her0
-        $this->forge->createTable('kategori_konten', TRUE);
+        $this->forge->createTable('maps', TRUE);
     }
 
     public function down()
     {
-        // menghapus tabel carousel_hero
-        $this->forge->dropTable('kategori_konten');
+        // menghapus tabel pengumuman
+        $this->forge->dropTable('maps');
     }
 }

@@ -12,12 +12,12 @@ class Home extends BaseController
         $data = [
             'daftar_carousel' => $this->CarouselModel->FindAll(),
             'daftar_egov' => $this->EgovModel->FindAll(),
-
             'daftar_galeri' => $this->GaleriModel->FindAll(),
             'daftar_pengumuman' => $this->PengumumanModel->FindAll(),
             'daftar_artikel' => $this->ArtikelModel->FindAll(),
-            // 'daftar_berita' => $this->BeritaModel->FindAll(),
-            // 'daftar_galeri' => $this->GaleriModel->FindAll(),
+            'daftar_agenda' => $this->AgendaModel->FindAll(),
+            'daftar_jadwal' => $this->JadwalModel->FindAll(),
+            'daftar_maps' => $this->MapsModel->FindAll(),
         ];
 
         echo view('templates/header');

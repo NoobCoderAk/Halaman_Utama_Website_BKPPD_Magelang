@@ -11,14 +11,14 @@
             </ol>
             <div class="card mb-4">
                 <div class="card-body">
-                    <div class="card mb-4">
+                    <div class="card mb-4" style="height: 700px;">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            Kategori Konten
+                            Maps
                         </div>
                         <div class="card-body">
 
-                            <!-- Button trigger tambah modal -->
+                            <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary mb-3 btn-sm" data-bs-toggle="modal" data-bs-target="#tambahModal">
                                 <i class="fas fa-plus"></i>
                                 Tambah
@@ -29,31 +29,23 @@
                                     <?= session('success') ?>
                                 </div>
                             <?php endif; ?>
-
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Nama Kategori</th>
-                                        <th>Tanggal Input</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($daftar_kategori as $kategori) : ?>
-                                        <tr>
-                                            <td><?= $no++ ?></td>
-                                            <td><?= $kategori->nama_kategori ?></td>
-                                            <td><?= $kategori->tanggal_input ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?= $kategori->id_kategori ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $kategori->id_kategori ?>"><i class="fas fa-trash-alt"></i>Hapus</button>
-                                            </td>
-                                        </tr>
+                            <div class="col-md-6 map w-100">
+                                <div class="row head-map justify-content-center text-center ">
+                                    <h2>Maps</h2>
+                                </div>
+                                <div style="height: 20px;"></div>
+                                <div class="row container-map shadow justify-content-center" style="margin:auto !important;">
+                                    <?php foreach ($daftar_maps as $maps) : ?>
+                                        <div id="map-container-google-1" class="z-depth-1-half container-map">
+                                            <iframe src="<?= $maps->link_maps; ?>" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="row">
+                                            <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $maps->id_maps ?>"><i class="fas fa-edit"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $maps->id_maps ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                        </div>
                                     <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,22 +53,26 @@
         </div>
     </main>
 
+
+
     <!-- Modal Tambah -->
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-primary">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Kategori Konten</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah maps</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('kategori/tambah'); ?>" method="post">
+                    <form action="<?= base_url('maps/tambah'); ?>" method="post" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="mb-3">
-                            <label for="nama_kategori">Nama Kategori</label>
-                            <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" required>
-                        </div>
+                            <label for="nama_maps">Nama Maps</label>
+                            <input type="text" name="nama_maps" id="nama_maps" class="form-control" required>
 
+                            <label for="link_maps">Link Lokasi</label>
+                            <input type="text" name="link_maps" id="link_maps" class="form-control" required>
+                        </div>
 
                 </div>
                 <div class="modal-footer">
@@ -88,25 +84,27 @@
         </div>
     </div>
 
+
     <!-- Modal Edit -->
-    <?php foreach ($daftar_kategori as $kategori) : ?>
-        <div class="modal fade" id="editModal<?= $kategori->id_kategori ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php foreach ($daftar_maps as $maps) : ?>
+        <div class="modal fade" id="editModal<?= $maps->id_maps ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Kategori Konten</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit maps</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="<?= base_url('kategori/edit/' . $kategori->id_kategori); ?>" method="post">
+                        <form action="<?= base_url('maps/edit/' . $maps->id_maps); ?>" method="post" enctype="multipart/form-data">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="PUT">
                             <div class="mb-3">
-                                <label for="nama_kategori">Nama Kategori</label>
-                                <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" value="<?= $kategori->nama_kategori ?>" required>
+                                <label for="nama_maps">Nama Maps</label>
+                                <input type="text" name="nama_maps" id="nama_maps" class="form-control" value="<?= $maps->nama_maps ?>" required>
+
+                                <label for="link_maps">link Acara </label>
+                                <input type="text" name="link_maps" id="link_maps" class="form-control" value="<?= $maps->link_maps ?>" required>
                             </div>
-
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Batal</button>
@@ -119,21 +117,21 @@
     <?php endforeach; ?>
 
     <!-- Modal Hapus -->
-    <?php foreach ($daftar_kategori as $kategori) : ?>
-        <div class="modal fade" id="hapusModal<?= $kategori->id_kategori ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php foreach ($daftar_maps as $maps) : ?>
+        <div class="modal fade" id="hapusModal<?= $maps->id_maps ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">kategori Kategori Konten</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus maps</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="<?= base_url('kategori/hapus/' . $kategori->id_kategori); ?>" method="post">
+                        <form action="<?= base_url('maps/hapus/' . $maps->id_maps); ?>" method="post">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
                                 <!-- <input type="hidden" name="_DELETE"> -->
-                                <p> Apakah anda yakin untuk menghapus kategori <?= ' "', $kategori->nama_kategori, '" '  ?> ini ?</p>
+                                <p> Apakah anda yakin untuk menghapus maps <?= ' "', $maps->link_maps, '" '  ?> ini ?</p>
                             </div>
                     </div>
                     <div class="modal-footer">
@@ -145,5 +143,4 @@
             </div>
         </div>
     <?php endforeach; ?>
-
     <?= $this->endSection(); ?>
